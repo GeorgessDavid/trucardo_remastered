@@ -112,7 +112,7 @@ def jugar_truco(puntosjugador1, puntosjugador2, mazo):
             elif(juego == '' or juego == 'no' and turno > 1): #este if es a partir del 2do turno y si no se canto truco
                 juego = ''
                 while(juego != 'truco' and juego != 'no'):
-                    juego = input('Cantas truco? (escribí "truco" o "no"): ') #se agarra el input
+                    juego = input('Cantas truco? (escribí "truco" o "no"): ').lower().strip() #se agarra el input
                     if(juego != 'truco' and juego != 'no'): # validacion para entradas no validas
                         print('Lo que ingresaste no es valido, intenta de nuevo')
                     elif(juego == 'truco'): #si lo ingresado en el input es truco, Jugador 2 decide si aceptar o no
@@ -151,7 +151,7 @@ def jugar_truco(puntosjugador1, puntosjugador2, mazo):
                 #si esta cantado retruco por jugador 2, ya que cantoJugador esta en false, se pregunta si se quiere cantar vale cuatro
                 confirmacion = ''
                 while(confirmacion != 'si' and confirmacion != 'no'):
-                    confirmacion = input('Queres cantar vale cuatro? (por "si" o por "no"): ')
+                    confirmacion = input('Queres cantar vale cuatro? (por "si" o por "no"): ').lower().strip()
                     if(confirmacion != 'si' and confirmacion != 'no'):
                         print('Lo que ingresaste no es valido, intenta de nuevo')
                     elif(confirmacion == 'si'): #si se quiere vale cuatro, se pregunta a jugador 2
@@ -171,7 +171,7 @@ def jugar_truco(puntosjugador1, puntosjugador2, mazo):
             #si cantoMaquina = True, entonces se le pregunta al jugador 1 si quiere lo que canto jugador 2
             confirmacion = ''
             while(confirmacion != 'si' and confirmacion != 'no'):
-                confirmacion = input('Aceptas lo que cantó Jugador 2? (por "si" o por "no"): ')
+                confirmacion = input('Aceptas lo que cantó Jugador 2? (por "si" o por "no"): ').lower().strip()
                 if(confirmacion != 'si' and confirmacion != 'no'):
                     print('Lo que ingresaste no es valido, intenta de nuevo')
                 elif(confirmacion == 'no'):
