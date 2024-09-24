@@ -44,3 +44,21 @@ def determinar_ganador(carta1, carta2):
     # Encontrar los índices de las cartas
     valor_carta1 = obtener_jerarquia(carta1)
     valor_carta2 = obtener_jerarquia(carta2)
+    
+     # Determinar el ganador
+    if valor_carta1 < valor_carta2:
+        ganadorUltimaRonda = 'Jugador 1'
+    elif valor_carta2 < valor_carta1:
+        ganadorUltimaRonda = 'Jugador 2'
+    else:
+        ganadorUltimaRonda = 'Empate'
+
+    return ganadorUltimaRonda
+
+# Función para separar el tanto recibido, devuelve número como integer y el palo de la carta.
+def separar_tanto(string):
+    # Desempaquetamos directamente el resultado de split en dos variables
+    numero, palo = string.split(' de ')
+
+    # Convertimos el número en entero y retornamos la lista
+    return [int(numero), palo]
