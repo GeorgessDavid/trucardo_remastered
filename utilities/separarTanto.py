@@ -1,9 +1,7 @@
-def separarTanto(string):
-    numero = ''
-    palo = ''
-    
-    partes = string.split(' de ')
-    numero = int(partes[0])
-    palo = partes[1]
+# Función para separar el tanto recibido, devuelve número como integer y el palo de la carta.
+def separar_tanto(string):
+    # Desempaquetamos directamente el resultado de split en dos variables
+    numero, palo = string.split(' de ')
 
-    return [numero, palo]
+    # Convertimos el número en entero y retornamos la lista
+    return [int(numero), palo]

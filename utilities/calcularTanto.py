@@ -1,88 +1,40 @@
-import separarTanto
+from utilities.separarTanto import separar_tanto as separar_tanto
 
-def calcularTanto(cartas):
-    
-    while len(cartas) >= 2: 
-        num = []
-        palo = []
-        # separamos los números y los palos
-        for i in range(len(cartas)):
-            naipe = separarTanto(cartas[i])
-            num.append(naipe[0])
-            palo.append(naipe[1])
-            
-        tanto = 0
-
-        # Caso particular de que las 3 cartas sean del mismo palo ya que no se utiliza la flor.
-        if palo[0] == palo[1] == palo[2]:
-            masAlta1 = 0
-            masAlta2 = 0
-            if num[0] < 10: 
-                masAlta1 = num[0]
-
-            if num[1] > masAlta1 and num[1] < 10:
-                masAlta2 = masAlta1
-                masAlta1 = num[1]
-            if num[2] > masAlta1 and num[2] < 10:
-                masAlta2 = masAlta1
-                masAlta1 = num[2]
-            elif num[2] > masAlta2 and num[2] < 10:
-                masAlta2 = num[2]
-            tanto = 20 + masAlta1 + masAlta2
-            return tanto
-        
-        # Caso 1: Dos cartas del mismo palo y sin figuras
-        if palo[0] == palo[1] and num[0] < 10 and num[1] < 10:
-            tanto = 20 + num[0] + num[1]
-            return tanto
-        elif palo[0] == palo[2] and num[0] < 10 and num[2] < 10:
-            tanto = 20 + num[0] + num[2]
-            return tanto
-        elif palo[1] == palo[2] and num[1] < 10 and num[2] < 10:
-            tanto = 20 + num[1] + num[2]
-            return tanto
-
-        # Caso 2 Dos cartas del mismo palo y con al menos una figura
-    
-        elif palo[0] == palo[1]:
-            if num[0] >= 10 and num[1] >= 10:
-                tanto = 20
-            elif num[0] >= 10:
-                tanto = 20 + num[1]
-            elif num[1] >= 10:
-                tanto = 20 + num[0]
-            return tanto
-        elif palo[0] == palo[2]:
-            if num[0] >= 10 and num[2] >= 10:
-                tanto = 20
-            elif num[0] >= 10:
-                tanto = 20 + num[2]
-            elif num[2] >= 10:
-                tanto = 20 + num[0]
-            return tanto
-        elif palo[1] == palo[2]:
-            if num[1] >= 10 and num[2] >= 10:
-                tanto = 20
-            elif num[1] >= 10:
-                tanto = 20 + num[2]
-            elif num[2] >= 10:
-                tanto = 20 + num[1]
-            return tanto
-
-        # Caso 3 Ningún par de cartas del mismo palo
-        else:
-            cartaMasAlta = 0
-            if (num[0] < 10):
-                cartaMasAlta = num[0]
-            
-            if (num[1] < 10) and (num[1] >= cartaMasAlta):
-                cartaMasAlta = num[1]
-                            
-            if (num[2] < 10) and (num[2] >= cartaMasAlta):
-                cartaMasAlta = num[2]
-            
-            tanto = cartaMasAlta
-            return tanto
-            
-    else:
+def calcular_tanto(cartas):
+    if len(cartas) < 2:
         print('Error, se esperaba un arreglo de dos o más cartas')
+        return 0
+
+    # Separamos los números y los palos
+    num = []
+    palo = []
+    for carta in cartas:
+        naipe = separar_tanto(carta)
+        num.append(naipe[0])
+        palo.append(naipe[1])
+
+    tanto = 0
+
+    # Caso cuando las tres cartas son del mismo palo
+    if palo[0] == palo[1] == palo[2]:
+        mas_alta = max(num)
+        num.remove(mas_alta)
+        tanto = mas_alta + max(num)
+        return tanto
+
+    # Caso 1: Dos cartas del mismo palo y sin figuras
+    for i in range(3):
+        for j in range(i + 1, 3):
+            if palo[i] == palo[j] and num[i] < 10 and num[j] < 10:
+                tanto = 20 + num[i] + num[j]
+
+            # Caso 2: Dos cartas del mismo palo con al menos una figura
+            elif palo[i] == palo[j]:
+                if num[i] > 10 or num[j] > 10:
+                    tanto = 20 + min(num[i], num[j])
+
+    # Caso 3: Ningún par de cartas del mismo palo
+    if tanto == 0:
+        tanto = max([n for n in num if n < 10], default=0)
+
+    return tanto
