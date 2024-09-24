@@ -4,10 +4,12 @@ from utilities.crearMazo import crear_mazo as crear_mazo
 # Ejecutar el juego
 puntosJuego = 0
 while(puntosJuego != 30 and puntosJuego != 15 and puntosJuego != 50):
-    puntosJuego = int(input('\nIndica a cuantos puntos va a ser el truco ("15", "30" o "50"): '))
-    if(puntosJuego != 30 and puntosJuego != 15 and puntosJuego != 50):
+    puntosJuego = input('\nIndica a cuantos puntos va a ser el truco ("15", "30" o "50"): ')
+    if(puntosJuego != "30" and puntosJuego != "15" and puntosJuego != "50"):
         print('No es valido lo que ingresaste, intenta de nuevo')
-
+    else:
+        puntosJuego=int(puntosJuego)
+    
 puntosjugador1 = 0
 puntosjugador2 = 0
 # Creamos el mazo de cartas
