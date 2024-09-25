@@ -9,6 +9,9 @@ from data.constantes import JERARQUIA
 
 # Función para jugar un truco
 def jugar_truco(puntosjugador1, puntosjugador2, mazo):
+    '''
+    Función que simula el juego del truco entre dos jugadores, el jugador 1 y el jugador 2.
+    '''
     if(len(mazo) <= 10):
         mazo = crear_mazo()
     cartas = repartir_cartas(mazo)

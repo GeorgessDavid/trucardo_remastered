@@ -19,7 +19,7 @@ while(puntosjugador1 < puntosJuego and puntosjugador2 < puntosJuego):
     puntosjugador1 = resultado[0]
     puntosjugador2 = resultado[1]
     print('\n================================\n')
-    print('Puntos de Jugador 1:', puntosjugador1)
+    print(f'Puntos de Jugador 1: {puntosjugador1}')
     print('Puntos de Jugador 2:', puntosjugador2)
 
 #si los dos pasan el puntaje a alcanzar, gana el que tenga mas puntos
