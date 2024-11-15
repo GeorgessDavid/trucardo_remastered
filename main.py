@@ -1,5 +1,10 @@
+import sys
+parent_dir="."
+sys.path.append(parent_dir)
+
 from game_logic import jugar_truco as jugar_truco
 from utilities.crearMazo import crear_mazo as crear_mazo
+
 
 # Ejecutar el juego
 puntosJuego = 0

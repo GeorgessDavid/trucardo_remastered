@@ -1,6 +1,9 @@
-from utilities.separarTanto import separar_tanto as separar_tanto
+from separarTanto import separar_tanto as separar_tanto
 
-def calcular_tanto(cartas):
+def calcular_tanto(cartas: list):
+    if not isinstance(cartas, list):
+        raise TypeError(f'Se esperaba una lista y se recibió un {type(cartas)}')
+    
     while len(cartas) >= 2: 
         num = []
         palo = []
@@ -82,9 +85,3 @@ def calcular_tanto(cartas):
             
             tanto = cartaMasAlta
             return tanto
-""" 
-print(calcular_tanto(['2 de Espadas', '3 de Espadas', '10 de Espadas'])) #Esperado: 25 - Obtenido: 13
-print(calcular_tanto(['2 de Espadas', '10 de Espadas', '3 de Espadas']))#Esperado: 25 - Obtenido: 13
-print(calcular_tanto(['10 de Espadas', '2 de Espadas', '3 de Espadas']))#Esperado: 25 - Obtenido: 13
-print(calcular_tanto(['10 de Espadas', '2 de Espadas', '11 de Espadas'])) #Esperado: 22 - Obtenido: 21
-print(calcular_tanto(['10 de Espadas', '2 de Espadas', '11 de Oros'])) #Esperado: 22 - Obtenido: 2 """
