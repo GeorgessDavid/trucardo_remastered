@@ -1,4 +1,4 @@
-from separarTanto import separar_tanto as separar_tanto
+from utilities.separarTanto import separar_tanto as separar_tanto
 
 def calcular_tanto(cartas: list):
     if not isinstance(cartas, list):

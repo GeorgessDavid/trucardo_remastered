@@ -1,9 +1,9 @@
 # Definimos la jerarquía de las cartas en el Truco.
 JERARQUIA = [
-    ['1 de Espadas'],
-    ['1 de Bastos'],
-    ['7 de Espadas'],
-    ['7 de Oros'],
+    tuple(['1 de Espadas']),
+    tuple(['1 de Bastos']),
+    tuple(['7 de Espadas']),
+    tuple(['7 de Oros']),
     tuple(['3 de Espadas', '3 de Oros', '3 de Copas', '3 de Bastos']),
     tuple(['2 de Espadas', '2 de Oros', '2 de Copas', '2 de Bastos']),
     tuple(['1 de Copas', '1 de Oros']),
