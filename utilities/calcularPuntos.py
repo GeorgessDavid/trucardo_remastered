@@ -1,4 +1,4 @@
-def calcular_puntos(juego, seQuiere, puntosjugador1, puntosjugador2, jugadorQueSuma):
+def calcular_puntos(juego: str, seQuiere: bool, puntosjugador1: int, puntosjugador2: int, jugadorQueSuma: str) -> list:
     # Definir los puntos para cada tipo de juego
     puntos_juego = {
         'truco': [1, 2],

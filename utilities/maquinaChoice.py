@@ -2,7 +2,8 @@ import random
 
 # Función para que la máquina decida si cantar o no
 
-def maquinaDecideSiCantar(turno, juegoActual, confirmacion):
+def maquinaDecideSiCantar(turno, juegoActual, confirmacion, manoMaq):
+    
     if not confirmacion:
         # Seleccionar los juegos posibles según el turno y el estado actual del juego
         if (juegoActual in ['', 'no'] and turno == 1):

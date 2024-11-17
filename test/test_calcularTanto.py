@@ -1,4 +1,4 @@
-from calcularTanto import calcular_tanto as calcularTanto
+from utilities.calcularTanto import calcular_tanto as calcularTanto
 
 def test_calcularTanto(): 
     assert calcularTanto(['12 de Espadas', '1 de Espadas', '3 de Bastos']) == 21, 'Debería devolver 21'

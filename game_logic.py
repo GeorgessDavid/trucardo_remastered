@@ -39,7 +39,7 @@ def jugar_truco(puntosjugador1, puntosjugador2, mazo):
         if(ganadorUltimaRonda == 'Jugador 2'):
             #Si el Jugador 2 gana la ultima ronda, comienza jugando, aca se ve si canta y que canta, si canta se pone la variable pivot "cantoMaquina" en True y "cantoJugador" en False
             if(cantoMaquina == False):
-                cantaMaq = maquinaDecideSiCantar(turno, juego, False)
+                cantaMaq = maquinaDecideSiCantar(turno, juego, False, mano_jugador2)
                 if(cantaMaq != 'no'):
                     juego = cantaMaq
                     print('Jugador 2 canta:', cantaMaq)
@@ -63,7 +63,7 @@ def jugar_truco(puntosjugador1, puntosjugador2, mazo):
                         print('Lo que ingresaste no es valido, intenta de nuevo')
                     elif(juego == 'truco' or juego == 'envido' or juego == 'real envido' or juego == 'falta envido'):
                         #Como cantoMaquina = False, aca la maquina decide si acepta o no el juego cantado
-                        confirmacion = maquinaDecideSiCantar(turno, juego, True)
+                        confirmacion = maquinaDecideSiCantar(turno, juego, True, mano_jugador2)
                         if(confirmacion == 'no'):
                         #Si entra aca es que el Jugador 2 no quiso el juego cantado
                             print('Jugador 2 no quiso')
@@ -119,7 +119,7 @@ def jugar_truco(puntosjugador1, puntosjugador2, mazo):
                     if(juego != 'truco' and juego != 'no'): # validacion para entradas no validas
                         print('Lo que ingresaste no es valido, intenta de nuevo')
                     elif(juego == 'truco'): #si lo ingresado en el input es truco, Jugador 2 decide si aceptar o no
-                        confirmacion = maquinaDecideSiCantar(turno, juego, True)
+                        confirmacion = maquinaDecideSiCantar(turno, juego, True, mano_jugador2)
                         if(confirmacion == 'no'):
                             print('Jugador 2 no quiso')
                             resultado = calcular_puntos(juego, False, puntosjugador1, puntosjugador2, 'Jugador 1')
@@ -139,7 +139,7 @@ def jugar_truco(puntosjugador1, puntosjugador2, mazo):
                         print('Lo que ingresaste no es valido, intenta de nuevo')
                     elif(confirmacion == 'si'): #si se quiere retruco, se pregunta a jugador 2
                         juego = 'retruco'
-                        confirmacion = maquinaDecideSiCantar(turno, juego, True)
+                        confirmacion = maquinaDecideSiCantar(turno, juego, True, mano_jugador2)
                         if(confirmacion == 'no'):
                             print('Jugador 2 no quiso')
                             resultado = calcular_puntos(juego, False, puntosjugador1, puntosjugador2, 'Jugador 1')
@@ -159,7 +159,7 @@ def jugar_truco(puntosjugador1, puntosjugador2, mazo):
                         print('Lo que ingresaste no es valido, intenta de nuevo')
                     elif(confirmacion == 'si'): #si se quiere vale cuatro, se pregunta a jugador 2
                         juego = 'vale cuatro'
-                        confirmacion = maquinaDecideSiCantar(turno, juego, True)
+                        confirmacion = maquinaDecideSiCantar(turno, juego, True, mano_jugador2)
                         if(confirmacion == 'no'):
                             print('Jugador 2 no quiso')
                             resultado = calcular_puntos(juego, False, puntosjugador1, puntosjugador2, 'Jugador 1')
@@ -229,8 +229,8 @@ def ejecutar_truco():
     # Ejecutar el juego
     puntosJuego = 0
     while(puntosJuego != 30 and puntosJuego != 15 and puntosJuego != 50):
-        puntosJuego = input('\nIndica a cuantos puntos va a ser el truco ("15", "30" o "50"): ')
-        if(puntosJuego != "30" and puntosJuego != "15" and puntosJuego != "50"):
+        puntosJuego = input('\nIndica a cuantos puntos va a ser el truco ("15" o "30"): ')
+        if(puntosJuego != "30" and puntosJuego != "15"):
             print('No es valido lo que ingresaste, intenta de nuevo')
         else:
             puntosJuego=int(puntosJuego)
@@ -257,5 +257,3 @@ def ejecutar_truco():
         print('Ganador: Jugador 1')
     else:
         print('Ganador: Jugador 2')
-    print('\nCopyright (r) LVA - La Vagancia Avanza - 2024. Todos los derechos reservados.\nTrucardoLVA')
-    print('\nCréditos: \nProduct Owner: Georges David  \nProject Manager: Iván Díaz \nContent Creator: Felipe Iván Figueredo Alarcón\nCommunity Manager: Luca Ravello Benito\nGod: Lionel Andrés Messi Cuccitinni\n---------------------\nTech Adviser: Franco Martorella - Grupo 3\nLawyer - Just In Case: Luciano Conde - Grupo 3\n')

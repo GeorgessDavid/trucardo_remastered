@@ -1,0 +1,191 @@
+PlayerName: Georges
+Indica a cuantos puntos va a ser el truco ("15", "30" o "50"): 
+================================
+
+Mano 1
+
+Jugador 1 tiene: ['5 de Espadas', '4 de Copas', '2 de Copas']
+
+Comienza jugando: Jugador 1
+Cantas truco, envido, real envido o falta envido? (escribí "truco", "envido", "real envido", "falta envido" o "no"): real envido querido
+Perdiste el envido: el Jugador 2 tenía 32 y tenías 26
+Cantas truco? (Escribí "truco" o "no"):ingresa cual es la posicion de la carta que queres jugar (tenes 3 cartas): Jugador 1 juega: 5 de Espadas
+Jugador 2 juega: 5 de Oros
+El ganador de la ronda es: Empate
+rondas ganadas jugador 1: 0
+rondas ganadas jugador 2: 0
+
+================================
+
+Mano 2
+
+Jugador 1 tiene: ['4 de Copas', '2 de Copas']
+
+Comienza jugando: Jugador 1
+Cantas truco? (escribí "truco" o "no"): Lo que ingresaste no es valido, intenta de nuevo
+Cantas truco? (escribí "truco" o "no"): Jugador 2 quiso
+ingresa cual es la posicion de la carta que queres jugar (tenes 2 cartas): Jugador 1 juega: 2 de Copas
+Jugador 2 juega: 7 de Copas
+El ganador de la ronda es: Jugador 1
+rondas ganadas jugador 1: 1
+rondas ganadas jugador 2: 0
+
+================================
+
+Mano 3
+
+Jugador 1 tiene: ['4 de Copas']
+
+Comienza jugando: Jugador 1
+ingresa cual es la posicion de la carta que queres jugar (tenes 1 cartas): Jugador 1 juega: 4 de Copas
+Jugador 2 juega: 7 de Oros
+El ganador de la ronda es: Jugador 2
+rondas ganadas jugador 1: 1
+rondas ganadas jugador 2: 1
+Empate, no se suman puntos
+
+================================
+
+Puntos de Jugador 1: 0
+Puntos de Jugador 2: 4
+
+================================
+
+Mano 1
+
+Jugador 1 tiene: ['12 de Oros', '10 de Copas', '7 de Espadas']
+
+Comienza jugando: Jugador 1
+Cantas truco, envido, real envido o falta envido? (escribí "truco", "envido", "real envido", "falta envido" o "no"): Jugador 2 no quiso
+Cantas truco? (Escribí "truco" o "no"):
+Jugador 2 quiso.
+ingresa cual es la posicion de la carta que queres jugar (tenes 3 cartas): Jugador 1 juega: 10 de Copas
+Jugador 2 juega: 7 de Oros
+El ganador de la ronda es: Jugador 2
+rondas ganadas jugador 1: 0
+rondas ganadas jugador 2: 1
+
+================================
+
+Mano 2
+
+Jugador 1 tiene: ['12 de Oros', '7 de Espadas']
+
+Comienza jugando: Jugador 2
+Jugador 2 juega: 11 de Espadas
+ingresa cual es la posicion de la carta que queres jugar (tenes 2 cartas): Jugador 1 juega: 12 de Oros
+El ganador de la ronda es: Jugador 1
+rondas ganadas jugador 1: 1
+rondas ganadas jugador 2: 1
+
+================================
+
+Mano 3
+
+Jugador 1 tiene: ['7 de Espadas']
+
+Comienza jugando: Jugador 1
+ingresa cual es la posicion de la carta que queres jugar (tenes 1 cartas): Jugador 1 juega: 7 de Espadas
+Jugador 2 juega: 10 de Oros
+El ganador de la ronda es: Jugador 1
+rondas ganadas jugador 1: 2
+rondas ganadas jugador 2: 1
+
+================================
+
+Puntos de Jugador 1: 3
+Puntos de Jugador 2: 4
+
+================================
+
+Mano 1
+
+Jugador 1 tiene: ['7 de Espadas', '4 de Bastos', '5 de Oros']
+
+Comienza jugando: Jugador 1
+Cantas truco, envido, real envido o falta envido? (escribí "truco", "envido", "real envido", "falta envido" o "no"): Jugador 2 no quiso
+Cantas truco? (Escribí "truco" o "no"):Jugador 2 no quiso
+
+================================
+
+Puntos de Jugador 1: 5
+Puntos de Jugador 2: 4
+
+================================
+
+Mano 1
+
+Jugador 1 tiene: ['5 de Espadas', '3 de Espadas', '7 de Bastos']
+
+Comienza jugando: Jugador 1
+Cantas truco, envido, real envido o falta envido? (escribí "truco", "envido", "real envido", "falta envido" o "no"): Jugador 2 no quiso
+Cantas truco? (Escribí "truco" o "no"):
+Jugador 2 quiso.
+ingresa cual es la posicion de la carta que queres jugar (tenes 3 cartas): Jugador 1 juega: 3 de Espadas
+Jugador 2 juega: 7 de Copas
+El ganador de la ronda es: Jugador 1
+rondas ganadas jugador 1: 1
+rondas ganadas jugador 2: 0
+
+================================
+
+Mano 2
+
+Jugador 1 tiene: ['5 de Espadas', '7 de Bastos']
+
+Comienza jugando: Jugador 1
+ingresa cual es la posicion de la carta que queres jugar (tenes 2 cartas): Jugador 1 juega: 7 de Bastos
+Jugador 2 juega: 7 de Espadas
+El ganador de la ronda es: Jugador 2
+rondas ganadas jugador 1: 1
+rondas ganadas jugador 2: 1
+
+================================
+
+Mano 3
+
+Jugador 1 tiene: ['5 de Espadas']
+
+Comienza jugando: Jugador 2
+Jugador 2 juega: 1 de Oros
+ingresa cual es la posicion de la carta que queres jugar (tenes 1 cartas): Jugador 1 juega: 5 de Espadas
+El ganador de la ronda es: Jugador 2
+rondas ganadas jugador 1: 1
+rondas ganadas jugador 2: 2
+
+================================
+
+Puntos de Jugador 1: 6
+Puntos de Jugador 2: 6
+
+================================
+
+Mano 1
+
+Jugador 1 tiene: ['3 de Bastos', '12 de Oros', '2 de Copas']
+
+Comienza jugando: Jugador 1
+Cantas truco, envido, real envido o falta envido? (escribí "truco", "envido", "real envido", "falta envido" o "no"): falta envido querido
+Perdiste el envido: el Jugador 2 tenía 26 y tenías 3
+
+Partido finalizado, lo ganó el Jugador 2.
+
+================================
+
+Puntos de Jugador 1: 6
+Puntos de Jugador 2: 1005
+Ganador: Jugador 2
+
+Copyright (r) LVA - La Vagancia Avanza - 2024. Todos los derechos reservados.
+TrucardoLVA
+
+Créditos: 
+Product Owner: Georges David  
+Project Manager: Iván Díaz 
+Content Creator: Felipe Iván Figueredo Alarcón
+Community Manager: Luca Ravello Benito
+God: Lionel Andrés Messi Cuccitinni
+---------------------
+Tech Adviser: Franco Martorella - Grupo 3
+Lawyer - Just In Case: Luciano Conde - Grupo 3
+
