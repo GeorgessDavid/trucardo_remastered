@@ -9,6 +9,7 @@ from utilities.maquinaChoice import maquinaDecideSiCantar
 from src.constantes import JERARQUIA
 from src.helper.colorLog import color as colorLog
 from src.helper.printError import printError as err
+from src.helper.selectorMenu import selectorMenu
 
 # Función para jugar un truco
 def jugar_truco(playerName: str, puntosjugador1: int, puntosjugador2: int, mazo: list):
@@ -60,14 +61,17 @@ def jugar_truco(playerName: str, puntosjugador1: int, puntosjugador2: int, mazo:
                 while(juego != 'truco' and juego != 'no'):
                     if(juego != 'envido' and juego != 'real envido' and juego != 'falta envido' and turno == 1 and envidoNoQuerido == False):
                         #Este if es la posibilidad de no haber cantado ni truco ni envido anteriormente y es el 1er turno
-                        juego = input('Cantas truco, envido, real envido o falta envido? (escribí "truco", "envido", "real envido", "falta envido" o "no"): ').lower()
+                        juego = selectorMenu(['Truco', 'Envido', 'Real Envido', 'Falta Envido', 'No'], colorLog(1, 33, 40, 'Querés cantar algo?:'), 'value').lower()                         
+                        # juego = input('Cantas truco, envido, real envido o falta envido? (escribí "truco", "envido", "real envido", "falta envido" o "no"): ').lower()
                     else:
                         #Aca llega si se canto envido anteriormente y no se quiso, o es el turno 2 y no se canto anteriormente truco
-                        juego = input('Cantas truco? (Escribí "truco" o "no"): ').lower().strip()
-                    if(juego != 'truco' and juego != 'envido' and juego != 'real envido' and juego != 'falta envido' and juego != 'no'):
-                        #validacion para que se ingrese lo indicado
-                        err('\nLo que ingresaste no es valido, intenta de nuevo.\n')
-                    elif(juego == 'truco' or juego == 'envido' or juego == 'real envido' or juego == 'falta envido'):
+                        # juego = input('Cantas truco? (Escribí "truco" o "no"): ').lower().strip()
+                        juego = selectorMenu(['Truco', 'No'], colorLog(1, 33, 40, 'Querés cantar algo?:'), 'value').lower()
+                    # if(juego != 'truco' and juego != 'envido' and juego != 'real envido' and juego != 'falta envido' and juego != 'no'):
+                    #     #validacion para que se ingrese lo indicado
+                    #     err('\nLo que ingresaste no es valido, intenta de nuevo.\n')
+                    # elif(juego == 'truco' or juego == 'envido' or juego == 'real envido' or juego == 'falta envido'):
+                    if(juego == 'truco' or juego == 'envido' or juego == 'real envido' or juego == 'falta envido'):
                         #Como cantoMaquina = False, aca la maquina decide si acepta o no el juego cantado
                         confirmacion = maquinaDecideSiCantar(turno, juego, True, mano_jugador2)
                         if(confirmacion == 'no'):
@@ -130,10 +134,12 @@ def jugar_truco(playerName: str, puntosjugador1: int, puntosjugador2: int, mazo:
             elif(juego == '' or juego == 'no' and turno > 1): #este if es a partir del 2do turno y si no se canto truco
                 juego = ''
                 while(juego != 'truco' and juego != 'no'):
-                    juego = input('Cantas truco? (escribí "truco" o "no"): ').lower().strip() #se agarra el input
-                    if(juego != 'truco' and juego != 'no'): # validacion para entradas no validas
-                        err('\nLo que ingresaste no es valido, intenta de nuevo.\n')
-                    elif(juego == 'truco'): #si lo ingresado en el input es truco, La CPU decide si aceptar o no
+                    # juego = input('Cantas truco? (escribí "truco" o "no"): ').lower().strip() #se agarra el input
+                    juego = selectorMenu(['Truco', 'No'], colorLog(1, 33, 40, 'Querés cantar algo?:'), 'value').lower()
+                    # if(juego != 'truco' and juego != 'no'): # validacion para entradas no validas
+                    #     err('\nLo que ingresaste no es valido, intenta de nuevo.\n')
+                    # elif(juego == 'truco'): #si lo ingresado en el input es truco, La CPU decide si aceptar o no
+                    if(juego == 'truco'): #si lo ingresado en el input es truco, La CPU decide si aceptar o no
                         confirmacion = maquinaDecideSiCantar(turno, juego, True, mano_jugador2)
                         if(confirmacion == 'no'):
                             print('La CPU no quiso')
@@ -149,10 +155,12 @@ def jugar_truco(playerName: str, puntosjugador1: int, puntosjugador2: int, mazo:
                 #si esta cantado truco por La CPU, ya que cantoJugador esta en false, se pregunta si se quiere cantar retruco
                 confirmacion = ''
                 while(confirmacion != 'si' and confirmacion != 'no'):
-                    confirmacion = input('Queres cantar retruco? (por "si" o por "no"): ').lower().strip()
-                    if(confirmacion != 'si' and confirmacion != 'no'):
-                        err('\nLo que ingresaste no es valido, intenta de nuevo\n')
-                    elif(confirmacion == 'si'): #si se quiere retruco, se pregunta a La CPU
+                    # confirmacion = input('Queres cantar retruco? (por "si" o por "no"): ').lower().strip()
+                    confirmacion = selectorMenu(['Si', 'No'],colorLog(1, 33, 40, 'Querés cantar retruco?'), 'value').lower()
+                    # if(confirmacion != 'si' and confirmacion != 'no'):
+                    #     err('\nLo que ingresaste no es valido, intenta de nuevo\n')
+                    # elif(confirmacion == 'si'): #si se quiere retruco, se pregunta a La CPU
+                    if(confirmacion == 'si'): #si se quiere retruco, se pregunta a La CPU
                         juego = 'retruco'
                         confirmacion = maquinaDecideSiCantar(turno, juego, True, mano_jugador2)
                         if(confirmacion == 'no'):
@@ -169,10 +177,12 @@ def jugar_truco(playerName: str, puntosjugador1: int, puntosjugador2: int, mazo:
                 #si esta cantado retruco por La CPU, ya que cantoJugador esta en false, se pregunta si se quiere cantar vale cuatro
                 confirmacion = ''
                 while(confirmacion != 'si' and confirmacion != 'no'):
-                    confirmacion = input('Queres cantar vale cuatro? (por "si" o por "no"): ').lower().strip()
-                    if(confirmacion != 'si' and confirmacion != 'no'):
-                        err('\nLo que ingresaste no es valido, intenta de nuevo.\n')
-                    elif(confirmacion == 'si'): #si se quiere vale cuatro, se pregunta a La CPU
+                    # confirmacion = input('Queres cantar vale cuatro? (por "si" o por "no"): ').lower().strip()
+                    confirmacion = selectorMenu(['Si', 'No'], colorLog(1, 33, 40, 'Querés cantar vale cuatro?'), 'value').lower()
+                    # if(confirmacion != 'si' and confirmacion != 'no'):
+                    #     err('\nLo que ingresaste no es valido, intenta de nuevo.\n')
+                    # elif(confirmacion == 'si'): #si se quiere vale cuatro, se pregunta a La CPU
+                    if(confirmacion == 'si'): #si se quiere vale cuatro, se pregunta a La CPU
                         juego = 'vale cuatro'
                         confirmacion = maquinaDecideSiCantar(turno, juego, True, mano_jugador2)
                         if(confirmacion == 'no'):
@@ -189,10 +199,12 @@ def jugar_truco(playerName: str, puntosjugador1: int, puntosjugador2: int, mazo:
             #si cantoMaquina = True, entonces se le pregunta al jugador 1 si quiere lo que canto La CPU
             confirmacion = ''
             while(confirmacion != 'si' and confirmacion != 'no'):
-                confirmacion = input('Aceptas lo que cantó La CPU? (por "si" o por "no"): ').lower().strip()
-                if(confirmacion != 'si' and confirmacion != 'no'):
-                    err('\nLo que ingresaste no es valido, intenta de nuevo.\n')
-                elif(confirmacion == 'no'):
+                confirmacion = selectorMenu(['Si', 'No'], colorLog(1, 33, 40, 'Aceptas lo que cantó La CPU?'), 'value').lower()
+                # confirmacion = input('Aceptas lo que cantó La CPU? (por "si" o por "no"): ').lower().strip()
+                # if(confirmacion != 'si' and confirmacion != 'no'):
+                #     err('\nLo que ingresaste no es valido, intenta de nuevo.\n')
+                # elif(confirmacion == 'no'):
+                if(confirmacion == 'no'):
                     resultado = calcular_puntos(playerName, juego, False, puntosjugador1, puntosjugador2, 'La CPU')
                     puntosjugador1 = resultado[0]
                     puntosjugador2 = resultado[1]
@@ -204,21 +216,23 @@ def jugar_truco(playerName: str, puntosjugador1: int, puntosjugador2: int, mazo:
         # Pide al jugador que ingrese el numero de la posicion de la carta, se juega lo que la variable juego dice
         while(cartaJugada == '' or cartaJugada > len(mano_jugador1)-1 or cartaJugada <= -1):
             
-            def ingresar_carta_jugada():
-                cartaJugada = input(f'Ingresa cual es la posicion de la carta que queres jugar (tenes {len(mano_jugador1)} cartas): ')
+            cartaJugada = selectorMenu(mano_jugador1, colorLog(1, 33, 40, 'Selecciona la carta que querés jugar') , 'index')
+            # def ingresar_carta_jugada():
+                # print(cartaJugada)
+                # cartaJugada = input(f'Ingresa cual es la posicion de la carta que queres jugar (tenes {len(mano_jugador1)} cartas): ')
 
-                if cartaJugada.isdigit():
-                    if int(cartaJugada) > len(mano_jugador1) or int(cartaJugada) <= 0:
-                        err("\nPosición no válida, intenta nuevamente.")
-                        return ingresar_carta_jugada()
+                # if cartaJugada.isdigit():
+                #     if int(cartaJugada) > len(mano_jugador1)-1 or int(cartaJugada) <= 0:
+                #         err("\nPosición no válida, intenta nuevamente.")
+                #         return ingresar_carta_jugada()
                     
-                    return int(cartaJugada) - 1
+                #     return int(cartaJugada)
 
-                err("\nPosición no válida, intenta nuevamente.")
-                return ingresar_carta_jugada()
+                # err("\nPosición no válida, intenta nuevamente.")
+                # return ingresar_carta_jugada()
         
 
-            cartaJugada = ingresar_carta_jugada()
+            # cartaJugada = ingresar_carta_jugada()
 
             #if(cartaJugada > len(mano_jugador1)-1 or cartaJugada <= -1):
             #    print('posicion no valida')
@@ -260,11 +274,13 @@ def ejecutar_truco(name: str):
     # Ejecutar el juego
     puntosJuego = 0
     while(puntosJuego != 30 and puntosJuego != 15):
-        puntosJuego = input('\nIndica a cuantos puntos va a ser el truco ("15" o "30"): ')
-        if(puntosJuego != "30" and puntosJuego != "15"):
-            err('\nNo es valido lo que ingresaste, intenta de nuevo.\n')
-        else:
-            puntosJuego=int(puntosJuego)
+        # puntosJuego = input('\nIndica a cuantos puntos va a ser el truco ("15" o "30"): ')
+        # if(puntosJuego != "30" and puntosJuego != "15"):
+        #     err('\nNo es valido lo que ingresaste, intenta de nuevo.\n')
+        # else:
+        #     puntosJuego=int(puntosJuego)
+        puntosJuego = selectorMenu([15, 30], colorLog(1, 37, 40, 'Selecciona a cuántos puntos va a ser el truco.'), 'value')
+        print(f'\nSe juega hasta {puntosJuego} puntos.')
         
     puntosjugador1 = 0
     puntosjugador2 = 0
