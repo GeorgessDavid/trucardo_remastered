@@ -1,0 +1,441 @@
+PlayerName: piton
+Indica a cuantos puntos va a ser el truco ("15" o "30"): 
+Cargando...
+
+================================
+
+Mano 1
+
+piton tiene: ['12 de Copas', '6 de Oros', '6 de Bastos']
+
+Comienza jugando: piton
+Cantas truco, envido, real envido o falta envido? (escribí "truco", "envido", "real envido", "falta envido" o "no"): Ingresa cual es la posicion de la carta que queres jugar (tenes 3 cartas): piton juega: 6 de Oros
+La CPU juega:  11 de Oros
+El ganador de la ronda es: La CPU
+rondas ganadas por piton:  0
+rondas ganadas por la CPU:  1
+
+Cargando...
+
+================================
+
+Mano 2
+
+piton tiene: ['12 de Copas', '6 de Bastos']
+
+Comienza jugando: La CPU
+La CPU juega: 7 de Oros
+Cantas truco? (escribí "truco" o "no"): 
+Lo que ingresaste no es valido, intenta de nuevo.
+
+Cantas truco? (escribí "truco" o "no"): Ingresa cual es la posicion de la carta que queres jugar (tenes 2 cartas): piton juega: 12 de Copas
+El ganador de la ronda es: La CPU
+rondas ganadas por piton:  0
+rondas ganadas por la CPU:  2
+No se cantó ni truco ni envido. Sólo se suma un punto.
+
+================================
+
+
+Ronda finalizada
+Puntos de piton: 0
+Puntos de La CPU: 1
+
+Cargando...
+
+================================
+
+Mano 1
+
+piton tiene: ['10 de Copas', '10 de Espadas', '6 de Espadas']
+
+Comienza jugando: piton
+Cantas truco, envido, real envido o falta envido? (escribí "truco", "envido", "real envido", "falta envido" o "no"): 
+La CPU quiso.
+Ingresa cual es la posicion de la carta que queres jugar (tenes 3 cartas): piton juega: 10 de Espadas
+La CPU juega:  1 de Espadas
+El ganador de la ronda es: La CPU
+rondas ganadas por piton:  0
+rondas ganadas por la CPU:  1
+
+Cargando...
+
+================================
+
+Mano 2
+
+piton tiene: ['10 de Copas', '6 de Espadas']
+
+Comienza jugando: La CPU
+La CPU juega: 4 de Espadas
+Ingresa cual es la posicion de la carta que queres jugar (tenes 2 cartas): piton juega: 6 de Espadas
+El ganador de la ronda es: piton
+rondas ganadas por piton:  1
+rondas ganadas por la CPU:  1
+
+Cargando...
+
+================================
+
+Mano 3
+
+piton tiene: ['10 de Copas']
+
+Comienza jugando: piton
+Ingresa cual es la posicion de la carta que queres jugar (tenes 1 cartas): piton juega: 10 de Copas
+La CPU juega:  3 de Copas
+El ganador de la ronda es: La CPU
+rondas ganadas por piton:  1
+rondas ganadas por la CPU:  2
+
+================================
+
+
+Ronda finalizada
+Puntos de piton: 0
+Puntos de La CPU: 3
+
+Cargando...
+
+================================
+
+Mano 1
+
+piton tiene: ['10 de Espadas', '11 de Bastos', '4 de Bastos']
+
+Comienza jugando: piton
+Cantas truco, envido, real envido o falta envido? (escribí "truco", "envido", "real envido", "falta envido" o "no"): La CPU no quiso
+Cantas truco? (Escribí "truco" o "no"): 
+La CPU quiso.
+Ingresa cual es la posicion de la carta que queres jugar (tenes 3 cartas): piton juega: 10 de Espadas
+La CPU juega:  10 de Copas
+El ganador de la ronda es: Empate
+rondas ganadas por piton:  0
+rondas ganadas por la CPU:  0
+
+Cargando...
+
+================================
+
+Mano 2
+
+piton tiene: ['11 de Bastos', '4 de Bastos']
+
+Comienza jugando: piton
+Ingresa cual es la posicion de la carta que queres jugar (tenes 2 cartas): piton juega: 11 de Bastos
+La CPU juega:  4 de Oros
+El ganador de la ronda es: piton
+rondas ganadas por piton:  1
+rondas ganadas por la CPU:  0
+
+Cargando...
+
+================================
+
+Mano 3
+
+piton tiene: ['4 de Bastos']
+
+Comienza jugando: piton
+Ingresa cual es la posicion de la carta que queres jugar (tenes 1 cartas): piton juega: 4 de Bastos
+La CPU juega:  4 de Copas
+El ganador de la ronda es: Empate
+rondas ganadas por piton:  1
+rondas ganadas por la CPU:  0
+
+================================
+
+
+Ronda finalizada
+Puntos de piton: 3
+Puntos de La CPU: 3
+
+Cargando...
+
+================================
+
+Mano 1
+
+piton tiene: ['7 de Espadas', '4 de Bastos', '6 de Oros']
+
+Comienza jugando: piton
+Cantas truco, envido, real envido o falta envido? (escribí "truco", "envido", "real envido", "falta envido" o "no"): La CPU no quiso
+
+================================
+
+
+Ronda finalizada
+Puntos de piton: 4
+Puntos de La CPU: 3
+
+Cargando...
+
+================================
+
+Mano 1
+
+piton tiene: ['11 de Oros', '5 de Bastos', '7 de Copas']
+
+Comienza jugando: piton
+Cantas truco, envido, real envido o falta envido? (escribí "truco", "envido", "real envido", "falta envido" o "no"): Ingresa cual es la posicion de la carta que queres jugar (tenes 3 cartas): piton juega: 5 de Bastos
+La CPU juega:  12 de Espadas
+El ganador de la ronda es: La CPU
+rondas ganadas por piton:  0
+rondas ganadas por la CPU:  1
+
+Cargando...
+
+================================
+
+Mano 2
+
+piton tiene: ['11 de Oros', '7 de Copas']
+
+Comienza jugando: La CPU
+La CPU juega: 4 de Oros
+Cantas truco? (escribí "truco" o "no"): 
+Lo que ingresaste no es valido, intenta de nuevo.
+
+Cantas truco? (escribí "truco" o "no"): La CPU no quiso
+
+================================
+
+
+Ronda finalizada
+Puntos de piton: 5
+Puntos de La CPU: 3
+
+Cargando...
+
+================================
+
+Mano 1
+
+piton tiene: ['5 de Copas', '10 de Bastos', '4 de Copas']
+
+Comienza jugando: piton
+Cantas truco, envido, real envido o falta envido? (escribí "truco", "envido", "real envido", "falta envido" o "no"): La CPU no quiso
+Cantas truco? (Escribí "truco" o "no"): 
+La CPU quiso.
+Ingresa cual es la posicion de la carta que queres jugar (tenes 3 cartas): piton juega: 10 de Bastos
+La CPU juega:  5 de Oros
+El ganador de la ronda es: piton
+rondas ganadas por piton:  1
+rondas ganadas por la CPU:  0
+
+Cargando...
+
+================================
+
+Mano 2
+
+piton tiene: ['5 de Copas', '4 de Copas']
+
+Comienza jugando: piton
+Ingresa cual es la posicion de la carta que queres jugar (tenes 2 cartas): piton juega: 5 de Copas
+La CPU juega:  3 de Espadas
+El ganador de la ronda es: La CPU
+rondas ganadas por piton:  1
+rondas ganadas por la CPU:  1
+
+Cargando...
+
+================================
+
+Mano 3
+
+piton tiene: ['4 de Copas']
+
+Comienza jugando: La CPU
+La CPU canta: retruco
+Aceptas lo que cantó La CPU? (por "si" o por "no"): se juega retruco
+La CPU juega:  1 de Bastos
+Ingresa cual es la posicion de la carta que queres jugar (tenes 1 cartas): piton juega: 4 de Copas
+El ganador de la ronda es: La CPU
+rondas ganadas por piton:  1
+rondas ganadas por la CPU:  2
+
+================================
+
+
+Ronda finalizada
+Puntos de piton: 6
+Puntos de La CPU: 6
+
+Cargando...
+
+================================
+
+Mano 1
+
+piton tiene: ['11 de Copas', '1 de Bastos', '12 de Bastos']
+
+Comienza jugando: piton
+Cantas truco, envido, real envido o falta envido? (escribí "truco", "envido", "real envido", "falta envido" o "no"): envido querido
+Perdiste el envido: la CPU tenía 27 y tenías 21
+Cantas truco? (Escribí "truco" o "no"): 
+La CPU quiso.
+Ingresa cual es la posicion de la carta que queres jugar (tenes 3 cartas): piton juega: 12 de Bastos
+La CPU juega:  5 de Espadas
+El ganador de la ronda es: piton
+rondas ganadas por piton:  1
+rondas ganadas por la CPU:  0
+
+Cargando...
+
+================================
+
+Mano 2
+
+piton tiene: ['11 de Copas', '1 de Bastos']
+
+Comienza jugando: piton
+Ingresa cual es la posicion de la carta que queres jugar (tenes 2 cartas): piton juega: 11 de Copas
+La CPU juega:  2 de Espadas
+El ganador de la ronda es: La CPU
+rondas ganadas por piton:  1
+rondas ganadas por la CPU:  1
+
+Cargando...
+
+================================
+
+Mano 3
+
+piton tiene: ['1 de Bastos']
+
+Comienza jugando: La CPU
+La CPU juega: 1 de Oros
+Ingresa cual es la posicion de la carta que queres jugar (tenes 1 cartas): piton juega: 1 de Bastos
+El ganador de la ronda es: piton
+rondas ganadas por piton:  2
+rondas ganadas por la CPU:  1
+
+================================
+
+
+Ronda finalizada
+Puntos de piton: 8
+Puntos de La CPU: 8
+
+Cargando...
+
+================================
+
+Mano 1
+
+piton tiene: ['11 de Bastos', '4 de Oros', '4 de Copas']
+
+Comienza jugando: piton
+Cantas truco, envido, real envido o falta envido? (escribí "truco", "envido", "real envido", "falta envido" o "no"): Ingresa cual es la posicion de la carta que queres jugar (tenes 3 cartas): piton juega: 4 de Oros
+La CPU juega:  10 de Bastos
+El ganador de la ronda es: La CPU
+rondas ganadas por piton:  0
+rondas ganadas por la CPU:  1
+
+Cargando...
+
+================================
+
+Mano 2
+
+piton tiene: ['11 de Bastos', '4 de Copas']
+
+Comienza jugando: La CPU
+La CPU canta: truco
+Aceptas lo que cantó La CPU? (por "si" o por "no"): se juega truco
+La CPU juega:  1 de Copas
+Ingresa cual es la posicion de la carta que queres jugar (tenes 2 cartas): piton juega: 4 de Copas
+El ganador de la ronda es: La CPU
+rondas ganadas por piton:  0
+rondas ganadas por la CPU:  2
+
+================================
+
+
+Ronda finalizada
+Puntos de piton: 8
+Puntos de La CPU: 10
+
+Cargando...
+
+================================
+
+Mano 1
+
+piton tiene: ['11 de Espadas', '4 de Oros', '7 de Oros']
+
+Comienza jugando: piton
+Cantas truco, envido, real envido o falta envido? (escribí "truco", "envido", "real envido", "falta envido" o "no"): real envido querido
+Ganaste el envido: tenías 31 y la CPU tenía 30
+
+Puntos totales después del envido: 
+piton:  12 
+La CPU:  10
+Cantas truco? (Escribí "truco" o "no"): 
+La CPU quiso.
+Ingresa cual es la posicion de la carta que queres jugar (tenes 3 cartas): piton juega: 11 de Espadas
+La CPU juega:  7 de Bastos
+El ganador de la ronda es: piton
+rondas ganadas por piton:  1
+rondas ganadas por la CPU:  0
+
+Cargando...
+
+================================
+
+Mano 2
+
+piton tiene: ['4 de Oros', '7 de Oros']
+
+Comienza jugando: piton
+Ingresa cual es la posicion de la carta que queres jugar (tenes 2 cartas): piton juega: 7 de Oros
+La CPU juega:  12 de Bastos
+El ganador de la ronda es: piton
+rondas ganadas por piton:  2
+rondas ganadas por la CPU:  0
+
+================================
+
+
+Ronda finalizada
+Puntos de piton: 14
+Puntos de La CPU: 10
+
+Cargando...
+
+================================
+
+Mano 1
+
+piton tiene: ['1 de Oros', '4 de Bastos', '11 de Copas']
+
+Comienza jugando: piton
+Cantas truco, envido, real envido o falta envido? (escribí "truco", "envido", "real envido", "falta envido" o "no"): Ingresa cual es la posicion de la carta que queres jugar (tenes 3 cartas): piton juega: 4 de Bastos
+La CPU juega:  12 de Espadas
+El ganador de la ronda es: La CPU
+rondas ganadas por piton:  0
+rondas ganadas por la CPU:  1
+
+Cargando...
+
+================================
+
+Mano 2
+
+piton tiene: ['1 de Oros', '11 de Copas']
+
+Comienza jugando: La CPU
+La CPU juega: 5 de Espadas
+Cantas truco? (escribí "truco" o "no"): 
+Lo que ingresaste no es valido, intenta de nuevo.
+
+Cantas truco? (escribí "truco" o "no"): La CPU no quiso
+
+================================
+
+
+Ronda finalizada
+Puntos de piton: 15
+Puntos de La CPU: 10
+Ganador: piton

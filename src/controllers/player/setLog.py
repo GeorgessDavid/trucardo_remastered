@@ -1,20 +1,29 @@
 import sys
+import re
 
 class DualOutput:
     def __init__(self, file):
         self.terminal = sys.stdout  # Guardar la salida estándar original (consola)
         self.file = file  # Archivo donde se escribirán los logs
 
-    def write(self, message):
-        self.terminal.write(message)  # Escribir en la consola
-        self.file.write(message)  # Escribir en el archivo
+    @staticmethod
+    def sanitize_message(message: str):
+        """
+        Sanitiza un mensaje limpiando los símbolos especiales devueltos por la función color.
+        """
+        return re.sub(r"(\[\d;\d+;\d+m)|(\[\dm)", "", message.replace("\x1b", ""))
 
+    def write(self, message: str):
+        self.terminal.write(message)  # Escribir en la consola
+        self.file.write(self.sanitize_message(message)) # Escribir en el archivo
+        
+    
     def flush(self):
         # Asegura que los datos se escriban inmediatamente
         self.terminal.flush()
         self.file.flush()
 
-def setLog(path: str, func) -> bool:
+def setLog(path: str, func, name:str ) -> bool:
     # Abrimos el archivo en modo A
     with open(path, 'a', encoding="UTF-8") as doc:
         dual_output = DualOutput(doc)  # Crear la salida dual
@@ -22,7 +31,7 @@ def setLog(path: str, func) -> bool:
         sys.stdout = dual_output  # Redirigir stdout
 
         try:
-            func()  # Ejecutar la función
+            func(name)  # Ejecutar la función
         finally:
             sys.stdout = original_stdout  # Restaurar stdout
 

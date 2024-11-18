@@ -27,12 +27,15 @@ def main():
 
 
     if(answer['option'] == 'Nuevo Juego'):
-        path = createPlayer(input('\nIngrese su nombre: '))
-        print(path)
+        newGame = createPlayer(input('\nIngrese el nombre del jugador: '))
+        
+        path = newGame[0]
+        name = newGame[1]
+        
         if (path):
             print('\nInicializando...')
             time.sleep(3)
-            setLog(path, ejecutar_truco)
+            setLog(path, ejecutar_truco, name)
     elif(answer['option'] == 'Ver Historial'):
         back = showLogs()
         if back:
