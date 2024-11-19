@@ -1,62 +1,0 @@
-PlayerName: Sinano[J[J
-[A[K(B[m[[33m?(B[m](B[m Selecciona a cuántos puntos va a ser el truco.: 
- [36m> 15(B[m[K
- (B[m  30(B[m[K
-
-
-Se juega hasta 15 puntos.
-
-Cargando...
-
-================================
-
-Mano 1
-
-Sinano tiene: ['1 de Bastos', '7 de Bastos', '12 de Copas']
-
-Comienza jugando: Sinano
-[J[J
-[A[K(B[m[[33m?(B[m](B[m Querés cantar algo?:: 
- [36m> Truco(B[m[K
- (B[m  Envido(B[m[K
- (B[m  Real Envido(B[m[K
- (B[m  Falta Envido(B[m[K
- (B[m  No(B[m[K
-[A[A[A[A[A[A[J
-[A[K(B[m[[33m?(B[m](B[m Querés cantar algo?:: 
- (B[m  Truco(B[m[K
- [36m> Envido(B[m[K
- (B[m  Real Envido(B[m[K
- (B[m  Falta Envido(B[m[K
- (B[m  No(B[m[K
-[A[A[A[A[A[A[J
-[A[K(B[m[[33m?(B[m](B[m Querés cantar algo?:: 
- (B[m  Truco(B[m[K
- (B[m  Envido(B[m[K
- [36m> Real Envido(B[m[K
- (B[m  Falta Envido(B[m[K
- (B[m  No(B[m[K
-[A[A[A[A[A[A[J
-[A[K(B[m[[33m?(B[m](B[m Querés cantar algo?:: 
- (B[m  Truco(B[m[K
- (B[m  Envido(B[m[K
- (B[m  Real Envido(B[m[K
- [36m> Falta Envido(B[m[K
- (B[m  No(B[m[K
-
-falta envido querido
-Ganaste el envido: tenías 28 y la CPU tenía 26
-
-Puntos totales después del envido: 
-Sinano:  999 
-La CPU:  0
-
-Partido finalizado, lo ganó Sinano.
-
-================================
-
-
-Ronda finalizada
-Puntos de Sinano: 999
-Puntos de La CPU: 0
-Ganador: Sinano
