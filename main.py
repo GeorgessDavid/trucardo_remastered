@@ -6,7 +6,7 @@ sys.path.append(parent_dir)
 
 from game_logic import ejecutar_truco as ejecutar_truco
 from src.controllers.player.player import createPlayer
-from src.controllers.player.setLog import setLog
+from src.controllers.log.setLog import setLog
 from src.controllers.log.showLogs import showLogs
 from src.helper.colorLog import color as colorLog
 
