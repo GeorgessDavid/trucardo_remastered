@@ -11,7 +11,21 @@ class DualOutput:
         """
         Sanitiza un mensaje limpiando los símbolos especiales devueltos por la función color.
         """
-        return re.sub(r"(\[\d;\d+;\d+m)|(\[\dm)", "", message.replace("\x1b", ""))
+        # Normalizar cualquier tipo de salto de línea a "\n"
+        message = message.replace("\r\n", "\n").replace("\r", "\n")
+        
+        # Eliminar secuencias ANSI estándar
+        message = re.sub(r"\x1b\[[0-9;]*[A-Za-z]", "", message)
+        
+        # Eliminar secuencias específicas como "(B" y otros patrones no deseados
+        message = re.sub(r"\x1b\(B", "", message)
+        message = re.sub(r"\[?\?", "", message)
+        
+        # Eliminar "]" del principio de las líneas
+        message = re.sub(r"^\] ", "", message, flags=re.MULTILINE)
+        
+        # Retornar con saltos de línea normalizados
+        return message
 
     def write(self, message: str):
         self.terminal.write(message)  # Escribir en la consola
