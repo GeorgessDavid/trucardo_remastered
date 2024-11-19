@@ -12,10 +12,9 @@ class DualOutput:
         Sanitiza un mensaje limpiando los símbolos especiales devueltos por la función color.
         """
         
-        sanitized = re.sub(r"\[\w+|\(\w", "", sanitized)
-        sanitized = re.sub(r"\x1b\[[0-9;]*[a-zA-Z]", "", message)
-        return sanitized
-        # return re.sub(r"(\[\d;\d+;\d+m)|(\[\dm)", "", message.replace("\x1b", ""))
+        # sanitized = re.sub(r"\[\w+|\(\w", "", sanitized)
+        # sanitized = re.sub(r"\x1b\[[0-9;]*[a-zA-Z]", "", message)
+        return re.sub(r"(\[\d;\d+;\d+m)|(\[\dm)", "", message.replace("\x1b", ""))
 
     def write(self, message: str):
         self.terminal.write(message)  # Escribir en la consola
