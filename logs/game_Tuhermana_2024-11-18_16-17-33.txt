@@ -1,154 +1,0 @@
-PlayerName: Tuhermana[J[J
-[A[K(B[m[[33m?(B[m](B[m Selecciona a cuántos puntos va a ser el truco.: 
- [36m> 15(B[m[K
- (B[m  30(B[m[K
-
-
-Se juega hasta 15 puntos.
-
-Cargando...
-
-================================
-
-Mano 1
-
-Tuhermana tiene: ['10 de Espadas', '2 de Espadas', '1 de Bastos']
-
-Comienza jugando: Tuhermana
-[J[J
-[A[K(B[m[[33m?(B[m](B[m Querés cantar algo?:: 
- [36m> Truco(B[m[K
- (B[m  Envido(B[m[K
- (B[m  Real Envido(B[m[K
- (B[m  Falta Envido(B[m[K
- (B[m  No(B[m[K
-[A[A[A[A[A[A[J
-[A[K(B[m[[33m?(B[m](B[m Querés cantar algo?:: 
- (B[m  Truco(B[m[K
- [36m> Envido(B[m[K
- (B[m  Real Envido(B[m[K
- (B[m  Falta Envido(B[m[K
- (B[m  No(B[m[K
-[A[A[A[A[A[A[J
-[A[K(B[m[[33m?(B[m](B[m Querés cantar algo?:: 
- (B[m  Truco(B[m[K
- (B[m  Envido(B[m[K
- [36m> Real Envido(B[m[K
- (B[m  Falta Envido(B[m[K
- (B[m  No(B[m[K
-
-real envido querido
-Perdiste el envido: la CPU tenía 28 y tenías 22
-[J[J
-[A[K(B[m[[33m?(B[m](B[m Querés cantar algo?:: 
- [36m> Truco(B[m[K
- (B[m  No(B[m[K
-[A[A[A[J
-[A[K(B[m[[33m?(B[m](B[m Querés cantar algo?:: 
- (B[m  Truco(B[m[K
- [36m> No(B[m[K
-
-[J[J
-[A[K(B[m[[33m?(B[m](B[m Selecciona la carta que querés jugar: 
- [36m> 10 de Espadas(B[m[K
- (B[m  2 de Espadas(B[m[K
- (B[m  1 de Bastos(B[m[K
-[A[A[A[A[J
-[A[K(B[m[[33m?(B[m](B[m Selecciona la carta que querés jugar: 
- (B[m  10 de Espadas(B[m[K
- [36m> 2 de Espadas(B[m[K
- (B[m  1 de Bastos(B[m[K
-[A[A[A[A[J
-[A[K(B[m[[33m?(B[m](B[m Selecciona la carta que querés jugar: 
- (B[m  10 de Espadas(B[m[K
- (B[m  2 de Espadas(B[m[K
- [36m> 1 de Bastos(B[m[K
-[A[A[A[A[J
-[A[K(B[m[[33m?(B[m](B[m Selecciona la carta que querés jugar: 
- (B[m  10 de Espadas(B[m[K
- [36m> 2 de Espadas(B[m[K
- (B[m  1 de Bastos(B[m[K
-
-Tuhermana juega: 2 de Espadas
-La CPU juega:  10 de Copas
-El ganador de la ronda es: Tuhermana
-rondas ganadas por Tuhermana:  1
-rondas ganadas por la CPU:  0
-
-Cargando...
-
-================================
-
-Mano 2
-
-Tuhermana tiene: ['10 de Espadas', '1 de Bastos']
-
-Comienza jugando: Tuhermana
-[J[J
-[A[K(B[m[[33m?(B[m](B[m Querés cantar algo?:: 
- [36m> Truco(B[m[K
- (B[m  No(B[m[K
-
-La CPU no quiso
-
-================================
-
-
-Ronda finalizada
-Puntos de Tuhermana: 1
-Puntos de La CPU: 4
-
-Cargando...
-
-================================
-
-Mano 1
-
-Tuhermana tiene: ['2 de Bastos', '2 de Oros', '4 de Bastos']
-
-Comienza jugando: Tuhermana
-[J[J
-[A[K(B[m[[33m?(B[m](B[m Querés cantar algo?:: 
- [36m> Truco(B[m[K
- (B[m  Envido(B[m[K
- (B[m  Real Envido(B[m[K
- (B[m  Falta Envido(B[m[K
- (B[m  No(B[m[K
-[A[A[A[A[A[A[J
-[A[K(B[m[[33m?(B[m](B[m Querés cantar algo?:: 
- (B[m  Truco(B[m[K
- [36m> Envido(B[m[K
- (B[m  Real Envido(B[m[K
- (B[m  Falta Envido(B[m[K
- (B[m  No(B[m[K
-[A[A[A[A[A[A[J
-[A[K(B[m[[33m?(B[m](B[m Querés cantar algo?:: 
- (B[m  Truco(B[m[K
- (B[m  Envido(B[m[K
- [36m> Real Envido(B[m[K
- (B[m  Falta Envido(B[m[K
- (B[m  No(B[m[K
-[A[A[A[A[A[A[J
-[A[K(B[m[[33m?(B[m](B[m Querés cantar algo?:: 
- (B[m  Truco(B[m[K
- (B[m  Envido(B[m[K
- (B[m  Real Envido(B[m[K
- [36m> Falta Envido(B[m[K
- (B[m  No(B[m[K
-
-falta envido querido
-Ganaste el envido: tenías 26 y la CPU tenía 23
-
-Puntos totales después del envido: 
-Tuhermana:  1000 
-La CPU:  4
-
-Partido finalizado, lo ganó Tuhermana.
-
-================================
-
-
-Ronda finalizada
-Puntos de Tuhermana: 1000
-Puntos de La CPU: 4
-Ganador: Tuhermana
