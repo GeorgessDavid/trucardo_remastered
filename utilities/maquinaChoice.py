@@ -29,23 +29,23 @@ def maquinaDecideSiCantar(turno, juegoActual, confirmacion, manoMaq):
             if len(cartasAltas) == 3:
                 probabilidades = [0.9, 0.1]
             elif len(cartasAltas) == 2:
-                probabilidades = [0.7, 0.3]
+                probabilidades = [0.8, 0.2]
             elif len(cartasAltas) == 1:
-                probabilidades = [0.5, 0.5]
+                probabilidades = [0.7, 0.3]
             else:
                 probabilidades = [0.3, 0.7]
         elif (len(manoMaq) == 2):
             if len(cartasAltas) == 2:
                 probabilidades = [0.9, 0.1]
             elif len(cartasAltas) == 1:
-                probabilidades = [0.5, 0.5]
-            else:
-                probabilidades = [0.3, 0.7]
-        elif (len(manoMaq) == 1):
-            if len(cartasAltas) == 1:
                 probabilidades = [0.7, 0.3]
             else:
-                probabilidades = [0.3, 0.7]
+                probabilidades = [0.5, 0.5]
+        elif (len(manoMaq) == 1):
+            if len(cartasAltas) == 1:
+                probabilidades = [0.8, 0.2]
+            else:
+                probabilidades = [0.5, 0.5]
 
     if not confirmacion:
         # Seleccionar los juegos posibles según el turno y el estado actual del juego
@@ -62,9 +62,9 @@ def maquinaDecideSiCantar(turno, juegoActual, confirmacion, manoMaq):
                 elif len(cartasAltas) == 2:
                     probabilidades = [0.7, 0.0, 0.0, 0.0, 0.3]
                 elif len(cartasAltas) == 1:
-                    probabilidades = [0.5, 0.0, 0.0, 0.0, 0.5]
+                    probabilidades = [0.6, 0.0, 0.0, 0.0, 0.4]
                 else:
-                    probabilidades = [0.3, 0.0, 0.0, 0.0, 0.7]
+                    probabilidades = [0.5, 0.0, 0.0, 0.0, 0.5]
             posiblesJuegos = ['truco', 'envido', 'real envido', 'falta envido', 'no']
             
         elif (juegoActual in ['', 'no'] and turno > 1):

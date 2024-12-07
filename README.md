@@ -7,17 +7,30 @@
 ## Descripción
 Versión de terminal del tradicional juego argentino, el truco.
 
-#### Integrantes
-Georges David
-Iván Díaz
-Felipe Figueredo
-Luca Ravello
+### Integrantes
+_Georges David_
+
+_Iván Díaz_
+
+_Felipe Figueredo_
+
+_Luca Ravello_
+
+#
+### Intentalo vos mismo!
+```
+git clone https://github.com/GeorgessDavid/trucardo_remastered.git
+cd .\trucardo_remastered\
+pip install inquirer
+python -m main.py
+```
+
+Y listo! A jugar!
+
 
 ### Cronograma
 #
-
 #### Hito 1
-#
 Utilización de Matrices, Tuplas, Rebanado, Comprensión de listas, Cadenas de Caracteres, Diccionarios y Conjuntos.
 
 * _Matrices_: ./src/constantes.py
@@ -28,7 +41,6 @@ Utilización de Matrices, Tuplas, Rebanado, Comprensión de listas, Cadenas de C
 * _Conjuntos_: No utilizado.
 
 #### Hito 2
-#
 Funciones Lambda, map, filter y reduce. Excepciones. Archivos. Expresiones regulares.
 * _Lambda_: ./src/helper/checkName.py - ./utilities/calcularPuntos.py - ./utilities/crearMazo.py
 * _Map_: ./utilities/crearMazo.py
@@ -39,7 +51,6 @@ Funciones Lambda, map, filter y reduce. Excepciones. Archivos. Expresiones regul
 * _Expresiones Regulares_: ./src/helper/checkName.py
 
 #### Hito 3
-# 
 Repositorio Git, Recursividad, Pruebas Unitarias.
 
 * _Git_: this.

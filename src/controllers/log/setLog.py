@@ -39,13 +39,14 @@ class DualOutput:
 
 def setLog(path: str, func, name:str ) -> bool:
     # Abrimos el archivo en modo A
-    with open(path, 'a', encoding="UTF-8") as doc:
+    with open(f'{path}/global_log.txt', 'a', encoding="UTF-8") as doc:
+        print(path)
         dual_output = DualOutput(doc)  # Crear la salida dual
         original_stdout = sys.stdout  # Guardar la salida original
         sys.stdout = dual_output  # Redirigir stdout
 
         try:
-            func(name)  # Ejecutar la función
+            func(name, path)  # Ejecutar la función
         finally:
             sys.stdout = original_stdout  # Restaurar stdout
 

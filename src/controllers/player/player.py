@@ -1,7 +1,8 @@
-# import os
+import os
 from datetime import datetime
 from src.helper.checkName import checkName as checkName
 from src.helper.printError import printError as error
+
 
 def createPlayer(name: str) -> str:
     ''' 
@@ -17,16 +18,21 @@ def createPlayer(name: str) -> str:
         name = input('\nIntroduce el nombre del jugador: ').strip()
 
     try: 
-        playerData = open(f'logs/game_{name}_{datetime.now().strftime("%Y-%m-%d_%H-%M-%S")}.txt', "w", encoding="UTF-8")
+        os.mkdir(f'logs/game_{name}_{datetime.now().strftime("%Y-%m-%d_%H-%M-%S")}') # Crear carpeta para guardar los logs
+        playerData = open(f'logs/game_{name}_{datetime.now().strftime("%Y-%m-%d_%H-%M-%S")}/playerName.txt', 'w', encoding='UTF-8')
 
         try: 
             playerData.write(f'PlayerName: {name}')
             print('\nJugador creado exitosamente.')
-            return [f'logs/game_{name}_{datetime.now().strftime("%Y-%m-%d_%H-%M-%S")}.txt', name]
+            
+            return [f'logs/game_{name}_{datetime.now().strftime("%Y-%m-%d_%H-%M-%S")}', name]
+        
         except Exception as err:
             print(f'\nError al escribir el archivo: {err}')
-        finally: 
+
+        finally:
             playerData.close()
+
     except FileNotFoundError: 
         print('\nNo se encuentra el archivo playerData.txt')
 

@@ -66,8 +66,8 @@ def tescalcular_puntos21():
 def tescalcular_puntos22():
     assert calcular_puntos('Julián','falta envido', False, 20, 28, 'Julián' ) == [21, 28], 'El jugador 1 deberia sumar 1 punto'
 
-def tescalcular_puntos22():
+def tescalcular_puntos23():
     assert calcular_puntos('Julián','falta envido', True, 20, 28, 'Jugador 2' ) == [20, 1031], 'El jugador 2 deberia sumar 999 puntos'
 
-def tescalcular_puntos23():
+def tescalcular_puntos24():
     assert calcular_puntos('Julián','falta envido', False, 20, 28, 'Jugador 2' ) == [20, 29], 'El jugador 1 deberia sumar 1 punto'

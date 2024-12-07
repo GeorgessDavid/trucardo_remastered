@@ -30,18 +30,21 @@ def main():
         newGame = createPlayer(input('\nIngrese el nombre del jugador: '))
         
         path = newGame[0]
+        print(path)
         name = newGame[1]
-        
         if (path):
             print('\nInicializando...')
             time.sleep(3)
             setLog(path, ejecutar_truco, name)
+
     elif(answer['option'] == 'Ver Historial'):
         print(colorLog(1,32,40, "Cargando..."))
         time.sleep(1)
         back = showLogs()
+
         if back:
             main()
+
     else:
         return
 
