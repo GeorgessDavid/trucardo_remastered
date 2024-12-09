@@ -22,7 +22,7 @@ _Luca Ravello_
 git clone https://github.com/GeorgessDavid/trucardo_remastered.git
 cd .\trucardo_remastered\
 pip install inquirer
-python -m main.py
+python main.py
 ```
 
 Y listo! A jugar!

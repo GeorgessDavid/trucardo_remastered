@@ -11,8 +11,10 @@ from src.helper.colorLog import color as colorLog
 # from src.helper.printError import printError as err
 from src.helper.selectorMenu import selectorMenu
 from src.controllers.log.save import save
+
+
 # Función para jugar un truco
-def jugar_truco(playerName: str, puntosjugador1: int, puntosjugador2: int, mazo: list, path: str):
+def jugar_truco(playerName: str, puntosjugador1: int, puntosjugador2: int, mazo: list, path: str, mano: int):
     '''
     Función que simula el juego del truco entre dos jugadores, el jugador  y la CPU.
     '''
@@ -29,7 +31,7 @@ def jugar_truco(playerName: str, puntosjugador1: int, puntosjugador2: int, mazo:
     cantoMaquina = False
     cantoJugador = False
     envidoNoQuerido = False
-    
+    manosChicas = ('Primera', 'Segunda', 'Tercera')    
     
     while(turno < 4 and rondasGanadasJugador1 < 2 and rondasGanadasJugador2 < 2):
         
@@ -45,7 +47,7 @@ def jugar_truco(playerName: str, puntosjugador1: int, puntosjugador2: int, mazo:
         
         time.sleep(1)
         
-        print(colorLog(1, 35, 40,f"\nMano {turno}"))
+        print(colorLog(1, 35, 40,f"\n{manosChicas[turno-1]}"))
         print(f"\n{colorLog(1,34,40, playerName)} tiene: {mano_jugador1}")
         print("\nComienza jugando:", ganadorUltimaRonda)
         
@@ -261,7 +263,7 @@ def jugar_truco(playerName: str, puntosjugador1: int, puntosjugador2: int, mazo:
         #Se sacan de la mano las cartas jugadas
         mano_jugador1.remove(mano_jugador1[cartaJugada])
         mano_jugador2.remove(mano_jugador2[0])
-        print("El ganador de la ronda es:",ganador)
+        print(f'El ganador de la {manosChicas[turno-1]} es {ganador}')
         
         if(ganador == playerName):
             rondasGanadasJugador1 = rondasGanadasJugador1 + 1
@@ -271,17 +273,21 @@ def jugar_truco(playerName: str, puntosjugador1: int, puntosjugador2: int, mazo:
         
         print(f'rondas ganadas por {colorLog(1,34,40, playerName)}: ', rondasGanadasJugador1)
         print('rondas ganadas por la CPU: ', rondasGanadasJugador2)
+
+        
         
         turno = turno + 1
         if(ganador != 'Empate'):
             ganadorUltimaRonda = ganador
 
     if(rondasGanadasJugador1 > rondasGanadasJugador2):
+        save(path, 'manoLogs.txt', f'\nMano {mano} ganada por {playerName}\n\tManos chicas ganadas: {rondasGanadasJugador1}\n')
         resultado = calcular_puntos(playerName, juego, True, puntosjugador1, puntosjugador2, playerName)
         puntosjugador1 = resultado[0]
         puntosjugador2 = resultado[1]
     
     elif(rondasGanadasJugador1 < rondasGanadasJugador2):
+        save(path, 'manoLogs.txt', f'\nMano {mano} ganada por la CPU\n\tManos chicas ganadas: {rondasGanadasJugador1}\n')
         resultado = calcular_puntos(playerName, juego, True, puntosjugador1, puntosjugador2, 'La CPU')
         puntosjugador1 = resultado[0]
         puntosjugador2 = resultado[1]
@@ -297,6 +303,7 @@ def ejecutar_truco(name: str, path: str):
     while(puntosJuego != 30 and puntosJuego != 15):
         
         puntosJuego = selectorMenu([15, 30], colorLog(1, 37, 40, 'Selecciona a cuántos puntos va a ser el truco.'), 'value')
+        save(path, 'gameConfig.txt', f'Esta partida se jugó a {puntosJuego} puntos.')
         print(f'\nSe juega hasta {puntosJuego} puntos.')
         
     puntosjugador1 = 0
@@ -305,27 +312,31 @@ def ejecutar_truco(name: str, path: str):
     # Creamos el mazo de cartas
     mazo = crear_mazo()
     
+    mano = 1
     while(puntosjugador1 < puntosJuego and puntosjugador2 < puntosJuego):
-        resultado = jugar_truco(name, puntosjugador1, puntosjugador2, mazo, path)
+        resultado = jugar_truco(name, puntosjugador1, puntosjugador2, mazo, path, mano)
         puntosjugador1 = resultado[0]
         puntosjugador2 = resultado[1]
         time.sleep(0.5)
         print('\n================================\n')
-        print(colorLog(1, 36, 40, '\nRonda finalizada'))
+        print(colorLog(1, 36, 40, f'\nMano {mano} finalizada'))
         print(f'Puntos de {colorLog(1,34,40, name)}: {puntosjugador1}')
         print('Puntos de La CPU:', puntosjugador2)
+        mano+=1
 
     #si los dos pasan el puntaje a alcanzar, gana el que tenga mas puntos
     if(puntosjugador1 >= puntosJuego and puntosjugador2 >= puntosJuego):
     
         if(puntosjugador1 > puntosjugador2):
             print(f'Ganador: {colorLog(1,34,40, name)}')
-    
+
         else:
             print('Ganador: La CPU')
-    
+
     elif(puntosjugador1 >= puntosJuego):
+        save(path, 'gameWinner.txt', f'Esta partida la ganó {name}.\n\n\t{name}: {puntosjugador1}\n\tCPU: {puntosjugador2}\n\nLa partida se jugaba a {puntosJuego}')
         print(f'Ganador: {colorLog(1,34,40, name)}')
     
     else:
+        save(path, 'gameWinner.txt', f'Esta partida la ganó la CPU.\n\n\t{name}: {puntosjugador1}\n\tCPU: {puntosjugador2}\n\nLa partida se jugaba a {puntosJuego}')
         print('Ganador: La CPU')
