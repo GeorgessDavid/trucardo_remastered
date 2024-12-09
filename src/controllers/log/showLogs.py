@@ -2,6 +2,7 @@ import inquirer
 import os
 import time
 from src.helper.colorLog import color as colorLog
+from src.helper.selectorMenu import selectorMenu
 
 def showLogs():
     options = [
@@ -9,25 +10,35 @@ def showLogs():
     ]
 
     try:
-        files = os.listdir('logs')
+        games = os.listdir('logs')
         
-        for file in files:
-            options.insert(0, file)
+        for game in games:
+            options.insert(0, game)
     except FileNotFoundError:
         print("La carpeta no existe")
 
-    questions = [
-        inquirer.List('option', message=colorLog(1,32,40,"Elije una partida"), choices=options)
-    ]
+    selected = selectorMenu(options, 'Seleccione una partida', 'value')
 
-    answer = inquirer.prompt(questions)
-
-    if answer['option'] != 'Volver':
+    if selected != 'Volver':
         try:
-            with open(f'logs/{answer["option"]}', 'r', encoding="UTF-8") as doc:
+            fileOptions = [
+                'Volver'
+            ]
+            
+            files = os.listdir(f'logs/{selected}') 
+            print(files)
+            
+            for file in files: fileOptions.insert(0, file)
+                
+
+            fileSelect = selectorMenu(fileOptions, 'Elija una opción', 'value')
+
+            showLogs() if fileSelect is 'Volver' else None
+
+            with open(f'logs/{selected}/{fileSelect}', 'r', encoding="UTF-8") as doc:
                 print(colorLog(1,32,40, f"Cargando la partida..."))
                 time.sleep(2)
-                print(colorLog(1,32,40, f"Partida: {answer['option']}"))
+                print(colorLog(1,32,40, f"Archivo: {fileSelect}"))
                 time.sleep(1)
                 print("\n====================\n")
                 print(doc.read())
