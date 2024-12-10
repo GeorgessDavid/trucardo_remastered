@@ -184,7 +184,6 @@ def jugar_truco(playerName: str, puntosjugador1: int, puntosjugador2: int, mazo:
                 
                 while(confirmacion != 'si' and confirmacion != 'no'):
                     
-                    # confirmacion = input('Queres cantar retruco? (por "si" o por "no"): ').lower().strip()
                     confirmacion = selectorMenu(['Si', 'No'],colorLog(1, 33, 40, 'Querés cantar retruco?'), 'value').lower()
                     
                     if(confirmacion == 'si'): #si se quiere retruco, se pregunta a La CPU

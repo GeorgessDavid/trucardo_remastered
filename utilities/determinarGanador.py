@@ -1,6 +1,9 @@
 from utilities.obtenerJerarquia import obtener_jerarquia as obtener_jerarquia
 
-def determinar_ganador(name: str, carta1, carta2):
+def determinar_ganador(name: str, carta1: str, carta2: str):
+    '''
+    Función para calcular el ganador entre dos cartas
+    '''
     # Encontrar los índices de las cartas
     valor_carta1 = obtener_jerarquia(carta1)
     valor_carta2 = obtener_jerarquia(carta2)

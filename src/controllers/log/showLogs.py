@@ -36,7 +36,7 @@ def showLogs():
             showLogs() if fileSelect is 'Volver' else None
 
             with open(f'logs/{selected}/{fileSelect}', 'r', encoding="UTF-8") as doc:
-                print(colorLog(1,32,40, f"Cargando la partida..."))
+                print(colorLog(1,32,40, f"Cargando datos..."))
                 time.sleep(2)
                 print(colorLog(1,32,40, f"Archivo: {fileSelect}"))
                 time.sleep(1)
