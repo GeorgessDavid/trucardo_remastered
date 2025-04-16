@@ -14,7 +14,7 @@ _Iván Díaz_
 
 _Felipe Figueredo_
 
-_Luca Ravello_
+_Luca Ravello_ (R.I.P)
 
 #
 ### Intentalo vos mismo!
